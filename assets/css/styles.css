@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet');
+
+/* RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3%;
+}
+/* downside to useing vh instead of % is that it's the viewport, so we need % instead */
+
+/* Reset all links to a basic starting format. Later on we can style certain links differently, based on our needs and this will be overwritten. */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+button, input {
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* GLOBAL CLASSES */
+.row, .column {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-1 {
+    flex: 1;
+}
+/* flexbox is row by default so by adding column above, column also needs to be direction: column */
+
+/* CUSTOM STYLES */
+header {
+    padding: 8px 0;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header nav a:not(:last-child) {
+    margin-right: 15px
+}
+
+main > h1 {
+    margin: 20px 0;
+}
+
+/* Home page */
+.start-now-btn {
+    margin-top: 25px;
+    background-color: #25bd6b;
+    color: #fff;
+    padding: 10px 35px;
+    font-size: 1.2rem;
+    border-radius: 3px;
+}
+
+/* Friends Page */
+ul li {
+    border: 1px solid #eee;
+    border-radius: 2px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+ul li button {
+    margin-left: 20px;
+    padding: 8px 20px;
+    background-color: #d73552;
+    color: #fff;
+}
+
+/* Form Page */
+form {
+    width: 450px;
+    margin: 0 auto;
+}
+
+form * {
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+}
+
+form input {
+    border: 1px solid #ddd;
+}
+
+form button {
+    font-size: 1.3rem;
+    font-weight: 300;
+    background-color: #25bd6b;
+    color: #fff;
+}
+
+footer {
+    padding: 25px 0;
+}
+/* RESPONSIVE STYLES */

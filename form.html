@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friend List - View Friends</title>
+    <title>Friend List - Add Friends</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet" rel="stylesheet">
     <!-- put links for font above stylesheet so it gets loaded first -->
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
 </head>
@@ -19,17 +19,18 @@
 
         <nav>
             <a href="index.html">Home</a>
-            <a href="form.html">Add Friends</a>
+            <a href="blog.html">View Friends</a>
         </nav>
     </header>
 
     <!-- Add dummy HTML of any content that will be on the page or inserted unto the page to use for styling before writing the JS -->
     <main class="flex-1">
-        <h1 class="text-center">Friends</h1>
-
-        <ul>
-            <p>No friends have been added.</p>
-        </ul>
+        <h1 class="text-center">Add Friend</h1>
+        
+        <form id="friend-form" class="column">
+            <input name="username" type="text" placeholder="Type your friend's name">
+            <button>Save</button>
+        </form>
 
     </main>
 
@@ -37,6 +38,7 @@
         <p>&copy; Copyright 2024</p>
         <p>Developed by Rutgers Class</p>
     </footer>
-    <script src="./js/view.js"> </script>
+
+    <script src="./js/form.js"> </script>
 </body>
 </html>

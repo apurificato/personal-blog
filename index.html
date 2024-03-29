@@ -4,17 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Blog</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+    <title>Friend List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet" rel="stylesheet">
+    <!-- put links for font above stylesheet so it gets loaded first -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css"></link>
 </head>
-<body>
-    <header>
-        <h2 class="logo main-color">Personal Blog</h2>
+<body class="column">
+<!-- What is going to show when the page first loads -->
+    <header class="row justify-between align-center">
+        <h3>Friend List</h3>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="blog.html">Blog Archive</a>
+            <a href="blog.html">View Friends</a>
+            <a href="form.html">Add Friends</a>
         </nav>
     </header>
-    <script src="./assets/js/form.js"></script>
+
+    <main class="flex-1 column justify-center align-center">
+        <h1>Welcome,</h1>
+        <h2>Add Your Friend Today!</h2>
+        <a class="start-now-btn" href="form.html">Start Now</a>
+    </main>
+
+    <footer class="row justify-between align-center">
+        <p>&copy; Copyright 2024</p>
+        <p>Developed by Rutgers Class</p>
+    </footer>
+
+
+
+
+    <!-- <script src="./js/script.js"> </script> -->
 </body>
 </html>
