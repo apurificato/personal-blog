@@ -34,7 +34,7 @@ function addFriend(eventObj) {
     localStorage.setItem('friends', JSON.stringify(names))
 
     // - Send the user to the View Friends page
-    window.location = 'view.html'
+    window.location = 'blog.html'
 }
 
 
