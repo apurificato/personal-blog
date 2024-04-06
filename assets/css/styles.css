@@ -15,8 +15,9 @@ html, body {
 body {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 3%;
+    padding: 20px 3%;
 }
+
 /* downside to useing vh instead of % is that it's the viewport, so we need % instead */
 
 a {

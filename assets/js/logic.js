@@ -35,11 +35,11 @@ if (currentMode) {
     body.classList.add(currentMode);
     // Update text content and toggle image based on the current mode
     if (currentMode === 'light-mode') {
-        document.querySelector('h1').textContent = lightModeTextTitle.greeting;
+        document.querySelector('.toggle-title').textContent = lightModeTextTitle.greeting;
         document.querySelector('.toggle-text').textContent = lightModeText.instruction;
         modeToggle.src = './assets/images/sun-image.png';
     } else {
-        document.querySelector('h1').textContent = darkModeTextTitle.greeting;
+        document.querySelector('.toggle-title').textContent = darkModeTextTitle.greeting;
         document.querySelector('.toggle-text').textContent = darkModeText.instruction;
         modeToggle.src = './assets/images/moon-image.png';
     }
@@ -51,14 +51,14 @@ function toggleMode() {
         // Switch to light mode
         body.classList.remove('dark-mode');
         modeToggle.src = './assets/images/sun-image.png';
-        document.querySelector('h1').textContent = lightModeTextTitle.greeting;
+        document.querySelector('.toggle-title').textContent = lightModeTextTitle.greeting;
         document.querySelector('.toggle-text').textContent = lightModeText.instruction;
         localStorage.setItem('mode', 'light-mode');
     } else {
         // Switch to dark mode
         body.classList.add('dark-mode');
         modeToggle.src = './assets/images/moon-image.png';
-        document.querySelector('h1').textContent = darkModeTextTitle.greeting;
+        document.querySelector('.toggle-title').textContent = darkModeTextTitle.greeting;
         document.querySelector('.toggle-text').textContent = darkModeText.instruction;
         localStorage.setItem('mode', 'dark-mode');
     }
