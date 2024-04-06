@@ -38,6 +38,21 @@ footer p {
 }
 
 /* GLOBAL CLASSES */
+/* .nav-button {
+    font-size: 1.3rem;
+    font-weight: 300;
+    background-color: #25bd6b;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+} */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+}
 .row, .column {
     display: flex;
 }
@@ -84,7 +99,10 @@ main > h1 {
     margin: 20px 0;
 }
 
-/* Home page */
+/* Home/Add Posts Page */
+.blog-form-elements h1, h2, form {
+    padding: 10px 0;
+}
 .start-now-btn {
     margin-top: 25px;
     background-color: #25bd6b;
@@ -94,45 +112,4 @@ main > h1 {
     border-radius: 3px;
 }
 
-/* Friends Page */
-ul li {
-    border: 1px solid #eee;
-    border-radius: 2px;
-    padding: 15px;
-    margin-bottom: 15px;
-}
-
-ul li button {
-    margin-left: 20px;
-    padding: 8px 20px;
-    background-color: #d73552;
-    color: #fff;
-}
-
-/* Form Page */
-form {
-    width: 450px;
-    margin: 0 auto;
-}
-
-form * {
-    padding: 8px 10px;
-    margin-bottom: 8px;
-    border-radius: 3px;
-}
-
-form input {
-    border: 1px solid #ddd;
-}
-
-form button {
-    font-size: 1.3rem;
-    font-weight: 300;
-    background-color: #25bd6b;
-    color: #fff;
-}
-
-footer {
-    padding: 25px 0;
-}
 /* RESPONSIVE STYLES */
