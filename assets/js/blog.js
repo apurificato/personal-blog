@@ -1,32 +1,32 @@
 // Select the ul from the DOM
-const friendsOutput = document.querySelector('ul')
+const blogsOutput = document.querySelector('ul')
 
 // Select all delete buttons from the DOM
 const deleteBtns = document.querySelectorAll('.delete-btn')
 
 console.log(deleteBtns)
 
-// Grab the names data from localStorage (make sure to parse when pull, since it's an array)
-const raw = localStorage.getItem('friends')
-let friends = JSON.parse(raw) || []
+// Grab the blog data from localStorage
+const raw = localStorage.getItem('blogs')
+let blogs = JSON.parse(raw) || []
 
 // Recieve the delete button element
-function removeFriend(btnObj) {
+function removeBlog(btnObj) {
     // Get the parent element of the button
     const parent = btnObj.parentElement 
     // Get the text of the button (used to retrieve the name)
     const para = parent.querySelector('p')
     const name = para.innerText
     // use the array filter method to filter the friends array out and remove the name matching the button text
-    const filtered = friends.filter(function (friend) {
-        if (friend !== name) {
+    const filtered = blogs.filter(function (blog) {
+        if (blog !== name) {
             return true
         }
     })
 
-    friends = filtered
+    blogs = filtered
 
-    localStorage.setItem('friends', JSON.stringify(friends))
+    localStorage.setItem('blogs', JSON.stringify(blogs))
 
     // Overwrite the old names data in localstorage(stringify)
     // localStorage.removeItem('friends')
@@ -34,8 +34,8 @@ function removeFriend(btnObj) {
     parent.remove()
 
     //If friends is empty, add the paragraph to our ul that says "no friends have been added"
-    if (!friends.length) {
-        friendsOutput.innerHTML = '<p>No Friends have been added.</p>'
+    if (!blogs.length) {
+        blogsOutput.innerHTML = '<p>No blog posts have been added yet.</p>'
     }
 }
 
@@ -48,17 +48,17 @@ function removeFriend(btnObj) {
 
 
 // Create a function that loops over the names array and outputs an li to the ul for each name in the names array
-function outputFriends() {
+function outputBlogs() {
     // If friends array is not empty, remove the no friends paragraph from the DOM
-    if (friends.length){
-        friendsOutput.innerHTML = ''
+    if (blogs.length){
+        blogsOutput.innerHTML = ''
     }
 
-    for (let friend of friends) {
+    for (let blog of blogs) {
         // Insert HTML into the friendsOutput Ul at the inside end (beforeend)
-        friendsOutput.insertAdjacentHTML('beforeend', `
+        blogsOutput.insertAdjacentHTML('beforeend', `
         <li class="row align-center">
-        <p>${friend}</p>
+        <p>${blog}</p>
         <button class="delete-btn">Delete</button>
         </li>
         `
@@ -67,7 +67,7 @@ function outputFriends() {
     }
 }
 
-outputFriends()
+outputBlogs()
 
 // Create an eventListener on all delete buttons so when clicked they remove that name from localstorage and also remove the li from the window.
 
@@ -78,7 +78,7 @@ document.body.addEventListener('click', function (eventObj) {
     // check if the element that was clicked was the delete button (use the classList to see if the element has a class of delete-btn).
     if (el.classList.contains('delete-btn')) {
     // when a delete button is clicked, pass the element to the remove friend function.
-        removeFriend(el)
+        removeBlog(el)
     }
 })
 

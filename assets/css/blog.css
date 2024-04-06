@@ -1,7 +1,22 @@
-/* Blog Posts Page */
-ul li {
+/* Blog Posts Page Output Styling */
+button#back-to-home {
+    font-size: 1.3rem;
+    font-weight: 300;
+    background-color: #25bd6b;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+ul {
     border: 1px solid #eee;
     border-radius: 2px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+ul li {
     padding: 15px;
     margin-bottom: 15px;
 }

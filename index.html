@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/form.css"></link>
 </head>
 <body class="column">
-<!-- What is going to show when the page first loads -->
     <header class="row justify-between align-center">
         <a href="index.html">
             <h3>Personal Blog Site</h3>
@@ -22,33 +21,31 @@
             <a href="index.html">Add Post</a>
             <a href="blog.html">View Posts</a>
         </nav>
-        <!-- <nav>
-            <a href="index.html"><button class="nav-button"><h3>Add Post</h3></button></a>
-            <a href="blog.html"><button class="nav-button"><h3>View Posts</h3></button></a>
-        </nav> -->
     </header>
-
     <!-- <main class="flex-1 column justify-center align-center"> -->
     <main class="grid-container">
         <section class="flex-1 column justify-center align-center">
+            <h1>Hello There</h1>
             <img src="assets/images/sun-image.png">
+            <h3>Click the sun to see what happens</h3>
         </section>
         <section class="blog-form-elements flex-1 column justify-center align-center">
-            <h1>Hello,</h1>
-            <h2>Add a Blog Post Here</h2>
-            <form id="friend-form" class="column">
-                <input name="username" type="text" placeholder="Blog Post Title">
+            <h2>Add a New Blog Post Here</h2>
+            <form id="blog-form" class="column">
+                <h4>Username</h4>
+                <input name="username" type="text">
+                <h4>Blog Title</h4>
+                <input name="postTitle" type="text">
+                <h4>Blog Content</h4>
+                <input id="text-input" name="postText" type="text">
                 <button>Save</button>
             </form>
         </section>
     </main>
-
     <footer class="row justify-between align-center">
         <p>&copy; Copyright 2024</p>
         <p>Developed by Anthony Purificato in Rutgers Bootcamp</p>
     </footer>
-
     <script src="./assets/js/form.js"> </script>
-
 </body>
 </html>

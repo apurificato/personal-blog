@@ -38,20 +38,11 @@ footer p {
 }
 
 /* GLOBAL CLASSES */
-/* .nav-button {
-    font-size: 1.3rem;
-    font-weight: 300;
-    background-color: #25bd6b;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 3px;
-} */
-
 .grid-container {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-column-gap: 10px;
-    grid-row-gap: 15px;
+    /* grid-row-gap: 15px; */
 }
 .row, .column {
     display: flex;

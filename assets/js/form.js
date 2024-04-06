@@ -1,6 +1,6 @@
 // Select the form element
 
-const friendForm = document.querySelector('#friend-form')
+const blogForm = document.querySelector('#blog-form')
 
 /**
     Create a function that triggers when the submit event occurs
@@ -13,25 +13,30 @@ const friendForm = document.querySelector('#friend-form')
         - Send the user to the View Friends page
  */
 
-function addFriend(eventObj) {
+function addBlog(eventObj) {
     //- Stop/Prevent the page from refreshing
     eventObj.preventDefault()
 
     //- Grab the input value from our name input (what they typed into the box)
-    const nameValue = friendForm.username.value
-    console.log(nameValue)
+    const usernameValue = blogForm.username.value
+    console.log(usernameValue)
+    const titleValue = blogForm.postTitle.value
+    console.log(titleValue)
+    const textValue = blogForm.postText.value
+    console.log(textValue)
 
     // - Grab all the names that have already been stored to local storage
-    const raw = localStorage.getItem('friends')
-    const names = JSON.parse(raw) || []
+    const raw = localStorage.getItem('blogs')
+    const blogs = JSON.parse(raw) || []
 
-    console.log(names)
+    console.log(blogs)
 
     //- Add the new name to the names
-    names.push(nameValue)
+    blogs.push(usernameValue, titleValue, textValue)
+    // names.push(textValue)
 
     // - Overwrite the old names value in local storage with the newly updated names
-    localStorage.setItem('friends', JSON.stringify(names))
+    localStorage.setItem('blogs', JSON.stringify(blogs))
 
     // - Send the user to the View Friends page
     window.location = 'blog.html'
@@ -43,7 +48,7 @@ function addFriend(eventObj) {
 // Wrap all initial starting listeners and any code that needs to run when the page loads in a function(initializing function)
 
 function init() {
-    friendForm.addEventListener('submit', addFriend)
+    blogForm.addEventListener('submit', addBlog)
     // Create a submit event listener for the form
 }
 

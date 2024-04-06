@@ -1,4 +1,4 @@
-/* Form Page */
+/* Form Styles */
 form {
     width: 450px;
     margin: 0 auto;
@@ -14,7 +14,11 @@ form input {
     border: 1px solid #ddd;
 }
 
-form button {
+form input#text-input {
+    height: 150px;
+}
+
+button {
     font-size: 1.3rem;
     font-weight: 300;
     background-color: #25bd6b;
