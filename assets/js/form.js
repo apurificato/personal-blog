@@ -1,3 +1,5 @@
+// JAVASCRIPT FOR USING THE FORM AND INPUTTING DATA ON THE MAIN/FRONT PAGE
+
 // Select the form element
 const blogForm = document.querySelector('#blog-form');
 

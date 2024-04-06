@@ -43,6 +43,7 @@ footer p {
     grid-column-gap: 10px;
     /* grid-row-gap: 15px; */
 }
+
 .row, .column {
     display: flex;
 }
@@ -110,9 +111,15 @@ h2 {
     border-radius: 3px;
 }
 
+/* LIGHT / DARK MODE TOGGLE STYLES */
+
 /* light mode */
 .light-mode {
     background-color: #fff;
+    color: #000;
+}
+
+.light-mode header a, .light-mode nav a {
     color: #000;
 }
 
@@ -122,5 +129,20 @@ h2 {
     color: #fff;
 }
 
+.dark-mode header a, .dark-mode nav a {
+    color: #fff;
+}
+
 
 /* RESPONSIVE STYLES */
+
+/* Tablet / mobile breakpoint */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-column-gap: 10px;
+        grid-row-gap: 40px;
+        padding-top: 40px;
+    }
+}
