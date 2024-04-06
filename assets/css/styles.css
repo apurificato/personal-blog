@@ -19,7 +19,6 @@ body {
 }
 /* downside to useing vh instead of % is that it's the viewport, so we need % instead */
 
-/* Reset all links to a basic starting format. Later on we can style certain links differently, based on our needs and this will be overwritten. */
 a {
     color: #333;
     text-decoration: none;
@@ -90,9 +89,17 @@ main > h1 {
     margin: 20px 0;
 }
 
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
 /* Home/Add Posts Page */
 .blog-form-elements h1, h2, form {
-    padding: 10px 0;
+    padding: 5px 0;
 }
 .start-now-btn {
     margin-top: 25px;
