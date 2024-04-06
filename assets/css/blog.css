@@ -16,6 +16,22 @@ ul li {
     margin-bottom: 15px;
 }
 
+/* li p {
+    line-break: strict;
+} */
+
+li p.title {
+    font-size: 22px;
+}
+
+li p.content {
+    font-size: 18px;
+}
+
+li p.username {
+    font-size: 14px;
+}
+
 ul li button {
     margin-left: 20px;
     padding: 8px 20px;

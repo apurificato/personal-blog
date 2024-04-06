@@ -110,4 +110,17 @@ h2 {
     border-radius: 3px;
 }
 
+/* light mode */
+.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+/* dark mode */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+
 /* RESPONSIVE STYLES */

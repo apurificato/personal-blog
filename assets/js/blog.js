@@ -33,9 +33,9 @@ function outputBlogs() {
     for (let blog of blogs) {
         blogsOutput.insertAdjacentHTML('beforeend', `
             <li class="row align-center">
-                <p class="title">${blog.title}</p>
-                <p class="content">${blog.content}</p>
-                <p class="username">Post written by ${blog.username}</p>
+                <p class="title"><span>${blog.title}</span></p>
+                <p class="content"><span>${blog.content}</span></p>
+                <p class="username"><span>Post written by ${blog.username}</span></p>
                 <button class="delete-btn">Delete</button>
             </li>
         `);
