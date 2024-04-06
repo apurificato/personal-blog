@@ -33,6 +33,10 @@ button {
     cursor: pointer;
 }
 
+footer p {
+    font-size: 12px;
+}
+
 /* GLOBAL CLASSES */
 .row, .column {
     display: flex;
