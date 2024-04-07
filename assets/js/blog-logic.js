@@ -1,4 +1,4 @@
-// JAVASCRIPT FOR TOGGLING LIGHT AND DARK MODES
+// JAVASCRIPT FOR TOGGLING LIGHT AND DARK MODES ON BLOG PAGE SPECIFICALLY
 
 // Select the toggle button element
 const modeToggle = document.querySelector('#mode-toggle');
@@ -6,27 +6,6 @@ const logoImage = document.querySelector('#mode-toggle-logo');
 
 // Select the HTML body element
 const body = document.body;
-
-// Define text content for light mode and dark mode
-const lightModeTextTitle = {
-    greeting: "Good Day",
-    // Add additional text content as needed
-};
-
-const lightModeText = {
-    instruction: "Click the sun to see what happens",
-    // Add additional text content as needed
-};
-
-const darkModeTextTitle = {
-    greeting: "Good Evening",
-    // Add additional text content as needed
-};
-
-const darkModeText = {
-    instruction: "Click the moon to see what happens",
-    // Add additional text content as needed
-};
 
 // Check if there's a mode stored in local storage
 const currentMode = localStorage.getItem('mode');
@@ -36,14 +15,8 @@ if (currentMode) {
     body.classList.add(currentMode);
     // Update text content and toggle image based on the current mode
     if (currentMode === 'light-mode') {
-        document.querySelector('.toggle-title').textContent = lightModeTextTitle.greeting;
-        document.querySelector('.toggle-text').textContent = lightModeText.instruction;
-        modeToggle.src = './assets/images/sun-image.png';
         updateLogoImage('light-mode'); // Update the logo image for light mode
     } else {
-        document.querySelector('.toggle-title').textContent = darkModeTextTitle.greeting;
-        document.querySelector('.toggle-text').textContent = darkModeText.instruction;
-        modeToggle.src = './assets/images/moon-image.png';
         updateLogoImage('dark-mode'); // Update the logo image for dark mode
     }
 }
@@ -53,17 +26,11 @@ function toggleMode() {
     if (body.classList.contains('dark-mode')) {
         // Switch to light mode
         body.classList.remove('dark-mode');
-        modeToggle.src = './assets/images/sun-image.png';
-        document.querySelector('.toggle-title').textContent = lightModeTextTitle.greeting;
-        document.querySelector('.toggle-text').textContent = lightModeText.instruction;
         updateLogoImage('light-mode'); // Update the logo image for light mode
         localStorage.setItem('mode', 'light-mode');
     } else {
         // Switch to dark mode
         body.classList.add('dark-mode');
-        modeToggle.src = './assets/images/moon-image.png';
-        document.querySelector('.toggle-title').textContent = darkModeTextTitle.greeting;
-        document.querySelector('.toggle-text').textContent = darkModeText.instruction;
         updateLogoImage('dark-mode'); // Update the logo image for dark mode
         localStorage.setItem('mode', 'dark-mode');
     }
