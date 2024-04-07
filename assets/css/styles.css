@@ -113,6 +113,10 @@ footer {
     padding: 25px 0;
 }
 
+.portfolio-link {
+    color: #25bd6b;
+}
+
 /* Home/Add Posts Page */
 .blog-form-elements h1, h2, form {
     padding: 5px 0;
