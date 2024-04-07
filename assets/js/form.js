@@ -1,59 +1,35 @@
+// JAVASCRIPT FOR USING THE FORM AND INPUTTING DATA ON THE MAIN/FRONT PAGE
+
 // Select the form element
+const blogForm = document.querySelector('#blog-form');
 
-const friendForm = document.querySelector('#friend-form')
+function addBlogs(eventObj) {
+    eventObj.preventDefault();
 
-/**
-    Create a function that triggers when the submit event occurs
+    const usernameValue = blogForm.username.value;
+    const titleValue = blogForm.postTitle.value;
+    const contentValue = blogForm.postText.value;
 
-        - Stop/Prevent the page from refreshing
-        - Grab the input value from our name input (what they typed into the box)
-        - Grab all the names that have already been stored to local storage
-        - Add the new name to the names
-        - Overwrite the old names value in local storage with the newly updated names
-        - Send the user to the View Friends page
- */
+    const raw = localStorage.getItem('blogs');
+    const blogs = JSON.parse(raw) || [];
 
-function addFriend(eventObj) {
-    //- Stop/Prevent the page from refreshing
-    eventObj.preventDefault()
+    const blog = {
+        username: usernameValue,
+        title: titleValue,
+        content: contentValue
+    };
 
-    //- Grab the input value from our name input (what they typed into the box)
-    const nameValue = friendForm.username.value
-    console.log(nameValue)
+    blogs.push(blog);
 
-    // - Grab all the names that have already been stored to local storage
-    const raw = localStorage.getItem('friends')
-    const names = JSON.parse(raw) || []
+    localStorage.setItem('blogs', JSON.stringify(blogs));
 
-    console.log(names)
-
-    //- Add the new name to the names
-    names.push(nameValue)
-
-    // - Overwrite the old names value in local storage with the newly updated names
-    localStorage.setItem('friends', JSON.stringify(names))
-
-    // - Send the user to the View Friends page
-    window.location = 'blog.html'
+    // Redirect to blog.html
+    window.location.href = 'blog.html';
 }
-
 
 // Create a submit event listener for the form
-
-// Wrap all initial starting listeners and any code that needs to run when the page loads in a function(initializing function)
-
 function init() {
-    friendForm.addEventListener('submit', addFriend)
-    // Create a submit event listener for the form
+    blogForm.addEventListener('submit', addBlogs);
 }
 
-init()
-
-// localStorage.setItem('num', 10)
-// localStorage.setItem('bool', true)
-
-// console.log(bool === 'true' && true)
-
-
-
-// when working with local storage, when you store an array, you stringify it and then when you are retrieving the array you parse (both of these using JSON). Examples are: JSON.stringify() and JSON.parse()
+init();

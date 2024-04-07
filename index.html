@@ -4,37 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friend List</title>
+    <title>Personal Blog Sample Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap" rel="stylesheet" rel="stylesheet">
     <!-- put links for font above stylesheet so it gets loaded first -->
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css"></link>
+    <link rel="stylesheet" type="text/css" href="./assets/css/form.css"></link>
 </head>
 <body class="column">
-<!-- What is going to show when the page first loads -->
     <header class="row justify-between align-center">
-        <h3>Friend List</h3>
+        <a href="index.html">
+            <!-- <h3>Personal Blog Site</h3> -->
+            <img src="assets/images/ThinkWell-blog-logo-original.png" class="logo" id="mode-toggle-logo">
+        </a>
         <nav>
-            <a href="blog.html">View Friends</a>
-            <a href="form.html">Add Friends</a>
+            <a href="index.html">Add Post</a>
+            <a href="blog.html">View Posts</a>
         </nav>
     </header>
-
-    <main class="flex-1 column justify-center align-center">
-        <h1>Welcome,</h1>
-        <h2>Add Your Friend Today!</h2>
-        <a class="start-now-btn" href="form.html">Start Now</a>
+    <!-- <main class="flex-1 column justify-center align-center"> -->
+    <main class="flex-1 grid-container">
+        <section class="column justify-center align-center">
+            <h1 class="toggle-title">Good Day</h1>
+            <img src="assets/images/sun-image.png" id="mode-toggle">
+            <h3 class="toggle-text">Click the sun to see what happens</h3>
+        </section>
+        <section class="blog-form-elements column justify-center align-center">
+            <h2>Go On, Share Your Thoughts...</h2>
+            <form id="blog-form" class="column">
+                <h4>Username</h4>
+                <input name="username" type="text">
+                <h4>Blog Title</h4>
+                <input name="postTitle" type="text">
+                <h4>Blog Content</h4>
+                <input id="text-input" name="postText" type="text">
+                <button>Save</button>
+            </form>
+        </section>
     </main>
-
     <footer class="row justify-between align-center">
         <p>&copy; Copyright 2024</p>
-        <p>Developed by Rutgers Class</p>
+        <p>Developed by <a class="portfolio-link" href="https://github.com/apurificato">Anthony Purificato</a> in Rutgers Bootcamp</p>
     </footer>
-
-
-
-
-    <!-- <script src="./js/script.js"> </script> -->
+    <script src="./assets/js/form.js"> </script>
+    <script src="./assets/js/logic.js"></script>
 </body>
 </html>
